@@ -1,1 +1,81 @@
 @import 'tailwindcss';
+
+@plugin 'daisyui';
+@plugin 'daisyui/theme' {
+  name: 'light';
+  default: true;
+  prefersdark: false;
+  color-scheme: 'light';
+
+  --color-base-100: var(--color-gray-200);
+  --color-base-200: var(--color-gray-100);
+  --color-base-300: var(--color-gray-50);
+  --color-base-content: var(--color-gray-800);
+  --color-primary: oklch(0.7341 0.1794 56.11);
+  --color-primary-content: var(--color-gray-900);
+  --color-secondary: oklch(0.8253 0.1706 79.94);
+  --color-secondary-content: var(--color-gray-800);
+  --color-accent: oklch(0.6484 0.1101 219);
+  --color-accent-content: var(--color-gray-900);
+  --color-neutral: var(--color-gray-700);
+  --color-neutral-content: var(--color-gray-100);
+  --color-info: var(--color-indigo-700);
+  --color-info-content: var(--color-indigo-100);
+  --color-success: var(--color-emerald-700);
+  --color-success-content: var(--color-emerald-100);
+  --color-warning: var(--color-amber-700);
+  --color-warning-content: var(--color-amber-100);
+  --color-error: var(--color-rose-700);
+  --color-error-content: var(--color-rose-100);
+  --radius-selector: 2rem;
+  --radius-field: 2rem;
+  --radius-box: 1rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 1;
+}
+@plugin 'daisyui/theme' {
+  name: 'dark';
+  default: false;
+  prefersdark: true;
+  color-scheme: 'dark';
+
+  --color-base-100: var(--color-gray-950);
+  --color-base-200: var(--color-gray-900);
+  --color-base-300: var(--color-gray-800);
+  --color-base-content: var(--color-gray-200);
+  --color-primary: oklch(0.7341 0.1794 56.11);
+  --color-primary-content: var(--color-gray-900);
+  --color-secondary: oklch(0.8253 0.1706 79.94);
+  --color-secondary-content: var(--color-gray-800);
+  --color-accent: oklch(0.6484 0.1101 219);
+  --color-accent-content: var(--color-gray-900);
+  --color-neutral: var(--color-gray-700);
+  --color-neutral-content: var(--color-gray-100);
+  --color-info: var(--color-indigo-700);
+  --color-info-content: var(--color-indigo-100);
+  --color-success: var(--color-emerald-700);
+  --color-success-content: var(--color-emerald-100);
+  --color-warning: var(--color-amber-700);
+  --color-warning-content: var(--color-amber-100);
+  --color-error: var(--color-rose-700);
+  --color-error-content: var(--color-rose-100);
+  --radius-selector: 2rem;
+  --radius-field: 2rem;
+  --radius-box: 1rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 1;
+}
+
+@theme inline {
+  --font-brand: 'Pattaya', sans-serif;
+  --font-body: 'Fredoka', sans-serif;
+  --font-sans: var(--font-body);
+}
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
