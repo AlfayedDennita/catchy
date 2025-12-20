@@ -71,6 +71,9 @@
   --depth: 0;
   --noise: 1;
 }
+@plugin '@iconify/tailwind4' {
+  prefixes: lucide;
+}
 
 @theme inline {
   --font-brand: 'Pattaya', sans-serif;
